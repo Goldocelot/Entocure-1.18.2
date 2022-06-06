@@ -1,12 +1,11 @@
-package be.goldocelot.entocure.entity.client.carpenter_ant;
+package be.goldocelot.entocure.client.renderer;
 
 import be.goldocelot.entocure.Entocure;
 
+import be.goldocelot.entocure.client.model.CarpenterAntQueenModel;
 import be.goldocelot.entocure.entity.custom.CarpenterAntQueenEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.math.Vector3f;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
@@ -18,7 +17,6 @@ import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.processor.IBone;
 import software.bernie.geckolib3.geo.render.built.GeoBone;
 import software.bernie.geckolib3.renderers.geo.ExtendedGeoEntityRenderer;
-import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 
 public class CarpenterAntQueenRenderer extends ExtendedGeoEntityRenderer<CarpenterAntQueenEntity> {
     public CarpenterAntQueenRenderer(EntityRendererProvider.Context renderManager) {

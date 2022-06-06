@@ -1,4 +1,4 @@
-package be.goldocelot.entocure.entity.client.carpenter_ant;
+package be.goldocelot.entocure.client.model;
 
 import be.goldocelot.entocure.Entocure;
 import be.goldocelot.entocure.entity.custom.CarpenterAntQueenEntity;

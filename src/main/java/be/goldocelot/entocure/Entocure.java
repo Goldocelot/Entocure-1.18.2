@@ -2,7 +2,7 @@ package be.goldocelot.entocure;
 
 import be.goldocelot.entocure.block.ModBlocks;
 import be.goldocelot.entocure.entity.ModEntityTypes;
-import be.goldocelot.entocure.entity.client.carpenter_ant.CarpenterAntQueenRenderer;
+import be.goldocelot.entocure.client.renderer.CarpenterAntQueenRenderer;
 import be.goldocelot.entocure.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
