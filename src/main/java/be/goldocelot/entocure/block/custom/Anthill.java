@@ -1,14 +1,18 @@
 package be.goldocelot.entocure.block.custom;
 
+import be.goldocelot.entocure.block.entity.custom.AnthillEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.Nullable;
 
-public class Anthill extends Block {
+public class Anthill extends BaseEntityBlock {
 
     public Anthill(Properties properties) {
         super(properties);
@@ -23,5 +27,11 @@ public class Anthill extends Block {
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return SHAPE;
+    }
+
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
+        return new AnthillEntity(pPos, pState);
     }
 }

@@ -1,7 +1,7 @@
 package be.goldocelot.entocure.client.model;
 
 import be.goldocelot.entocure.Entocure;
-import be.goldocelot.entocure.entity.custom.CarpenterAntQueenEntity;
+import be.goldocelot.entocure.entity.custom.ant.CarpenterAntQueenEntity;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.processor.IBone;
@@ -9,19 +9,23 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.model.provider.data.EntityModelData;
 
 public class CarpenterAntQueenModel extends AnimatedGeoModel<CarpenterAntQueenEntity> {
+    public static final ResourceLocation MODEL_LOCATION = new ResourceLocation(Entocure.MOD_ID, "geo/carpenter_ant_queen.geo.json");
+    public static final ResourceLocation TEXTURE_LOCATION = new ResourceLocation(Entocure.MOD_ID, "textures/entity/carpenter_ant_queen.png");
+    public static final ResourceLocation ANIMATION_LOCATION = new ResourceLocation(Entocure.MOD_ID, "animations/entity/carpenter_ant_queen.animation.json");
+
     @Override
     public ResourceLocation getModelLocation(CarpenterAntQueenEntity object) {
-        return new ResourceLocation(Entocure.MOD_ID, "geo/carpenter_ant_queen.geo.json");
+        return MODEL_LOCATION;
     }
 
     @Override
     public ResourceLocation getTextureLocation(CarpenterAntQueenEntity object) {
-        return new ResourceLocation(Entocure.MOD_ID, "textures/entity/carpenter_ant_queen.png");
+        return TEXTURE_LOCATION;
     }
 
     @Override
     public ResourceLocation getAnimationFileLocation(CarpenterAntQueenEntity animatable) {
-        return new ResourceLocation(Entocure.MOD_ID, "animations/entity/carpenter_ant_queen.animation.json");
+        return ANIMATION_LOCATION;
     }
 
     public void setLivingAnimations(CarpenterAntQueenEntity entity, Integer uniqueID, AnimationEvent customPredicate)

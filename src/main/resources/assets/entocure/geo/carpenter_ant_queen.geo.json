@@ -7,8 +7,8 @@
 				"texture_width": 32,
 				"texture_height": 32,
 				"visible_bounds_width": 2,
-				"visible_bounds_height": 1.5,
-				"visible_bounds_offset": [0, 0.25, 0]
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
 			},
 			"bones": [
 				{
@@ -70,9 +70,9 @@
 				{
 					"name": "Item",
 					"parent": "Mandibule",
-					"pivot": [0, 1.75, -6.25],
+					"pivot": [-0.05, 1.8, -6.2],
 					"cubes": [
-						{"origin": [-0.1, 1.75, -6.25], "size": [0.1, 0.1, 0.1], "uv": [28, 30]}
+						{"origin": [0, 1.75, -6.25], "size": [0, 0, 0], "uv": [28, 30]}
 					]
 				},
 				{

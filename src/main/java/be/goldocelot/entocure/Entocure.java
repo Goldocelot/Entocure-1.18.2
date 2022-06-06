@@ -1,6 +1,7 @@
 package be.goldocelot.entocure;
 
 import be.goldocelot.entocure.block.ModBlocks;
+import be.goldocelot.entocure.block.entity.ModBlockEntities;
 import be.goldocelot.entocure.entity.ModEntityTypes;
 import be.goldocelot.entocure.client.renderer.CarpenterAntQueenRenderer;
 import be.goldocelot.entocure.item.ModItems;
@@ -31,8 +32,9 @@ public class Entocure
         // Register the setup method for modloading
 
         ModItems.register(eventBus);
-        ModBlocks.register(eventBus);
 
+        ModBlocks.register(eventBus);
+        ModBlockEntities.register(eventBus);
         ModEntityTypes.register(eventBus);
 
         eventBus.addListener(this::setup);

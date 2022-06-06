@@ -1,5 +1,6 @@
-package be.goldocelot.entocure.entity.custom;
+package be.goldocelot.entocure.entity.custom.ant;
 
+import be.goldocelot.entocure.entity.custom.ant.goal.AntPickUpGrass;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.PathfinderMob;
@@ -23,7 +24,6 @@ public class CarpenterAntQueenEntity extends PathfinderMob implements IAnimatabl
 
     public CarpenterAntQueenEntity(EntityType<? extends PathfinderMob> entityType, Level level) {
         super(entityType, level);
-        this.setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(Items.GRASS));
     }
 
     public static AttributeSupplier setAttributes(){
@@ -38,9 +38,10 @@ public class CarpenterAntQueenEntity extends PathfinderMob implements IAnimatabl
     protected void registerGoals(){
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new PanicGoal(this, 2.0D));
-        this.goalSelector.addGoal(10, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-        this.goalSelector.addGoal(11, new LookAtPlayerGoal(this, Player.class, 6.0F));
-        this.goalSelector.addGoal(12, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(2, new AntPickUpGrass(this, 1f,8, 2));
+        this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 1.0D));
+        this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 6.0F));
+        this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
     }
 
     private  <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event)

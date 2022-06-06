@@ -1,7 +1,7 @@
 package be.goldocelot.entocure.entity;
 
 import be.goldocelot.entocure.Entocure;
-import be.goldocelot.entocure.entity.custom.CarpenterAntQueenEntity;
+import be.goldocelot.entocure.entity.custom.ant.CarpenterAntQueenEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
