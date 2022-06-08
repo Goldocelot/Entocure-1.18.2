@@ -13,8 +13,8 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, Entocure.MOD_ID);
 
-    public static final RegistryObject<BlockEntityType<AnthillEntity>> ANTHILL_ENTITY =
-            BLOCK_ENTITIES.register("gem_cutting_station_block_entity", () ->
+    public static final RegistryObject<BlockEntityType<AnthillEntity>> DIRT_ANTHILL_ENTITY =
+            BLOCK_ENTITIES.register("dirt_anthill_entity", () ->
                     BlockEntityType.Builder.of(AnthillEntity::new,
                             ModBlocks.DIRT_ANTHILL.get()).build(null));
 
