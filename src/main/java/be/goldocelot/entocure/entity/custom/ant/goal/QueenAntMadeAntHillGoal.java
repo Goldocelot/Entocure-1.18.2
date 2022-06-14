@@ -3,7 +3,6 @@ package be.goldocelot.entocure.entity.custom.ant.goal;
 import be.goldocelot.entocure.block.ModBlocks;
 import be.goldocelot.entocure.block.entity.custom.AnthillEntity;
 import be.goldocelot.entocure.entity.custom.ant.AntEntity;
-import be.goldocelot.entocure.entity.custom.ant.QueenAntEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.ai.goal.MoveToBlockGoal;
 import net.minecraft.world.level.LevelReader;
@@ -11,13 +10,13 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class QueenAntMadeAntHill extends MoveToBlockGoal {
+public class QueenAntMadeAntHillGoal extends MoveToBlockGoal {
     private static final int WAIT_TICKS = 40;
     protected int ticksWaited;
 
-    public QueenAntEntity ant;
+    public AntEntity ant;
 
-    public QueenAntMadeAntHill(QueenAntEntity pant, double pSpeedModifier, int pSearchRange, int pVerticalSearchRange) {
+    public QueenAntMadeAntHillGoal(AntEntity pant, double pSpeedModifier, int pSearchRange, int pVerticalSearchRange) {
         super(pant, pSpeedModifier, pSearchRange, pVerticalSearchRange);
         ant = pant;
     }

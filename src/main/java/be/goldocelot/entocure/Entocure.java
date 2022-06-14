@@ -2,6 +2,7 @@ package be.goldocelot.entocure;
 
 import be.goldocelot.entocure.block.ModBlocks;
 import be.goldocelot.entocure.block.entity.ModBlockEntities;
+import be.goldocelot.entocure.client.renderer.CarpenterAntRenderer;
 import be.goldocelot.entocure.entity.ModEntityTypes;
 import be.goldocelot.entocure.client.renderer.CarpenterAntQueenRenderer;
 import be.goldocelot.entocure.item.ModItems;
@@ -38,16 +39,11 @@ public class Entocure
         ModEntityTypes.register(eventBus);
 
         eventBus.addListener(this::setup);
-        eventBus.addListener(this::clientSetup);
 
         GeckoLib.initialize();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    private void clientSetup(final FMLClientSetupEvent event){
-        EntityRenderers.register(ModEntityTypes.CARPENTER_ANT_QUEEN.get(), CarpenterAntQueenRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event)

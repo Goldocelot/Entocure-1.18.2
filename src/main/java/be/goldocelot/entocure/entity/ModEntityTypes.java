@@ -1,6 +1,7 @@
 package be.goldocelot.entocure.entity;
 
 import be.goldocelot.entocure.Entocure;
+import be.goldocelot.entocure.entity.custom.ant.CarpenterAntEntity;
 import be.goldocelot.entocure.entity.custom.ant.CarpenterAntQueenEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -19,6 +20,12 @@ public class ModEntityTypes {
                     () -> EntityType.Builder.of(CarpenterAntQueenEntity::new, MobCategory.AMBIENT)
                             .sized(0.4f, 0.3f)
                             .build(new ResourceLocation(Entocure.MOD_ID, "carpenter_ant_queen").toString()));
+
+    public static final RegistryObject<EntityType<CarpenterAntEntity>> CARPENTER_ANT =
+            ENTITY_TYPES.register("carpenter_ant",
+                    () -> EntityType.Builder.of(CarpenterAntEntity::new, MobCategory.AMBIENT)
+                            .sized(0.4f, 0.3f)
+                            .build(new ResourceLocation(Entocure.MOD_ID, "carpenter_ant").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

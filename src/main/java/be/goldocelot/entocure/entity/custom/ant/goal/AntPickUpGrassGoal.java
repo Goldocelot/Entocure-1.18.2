@@ -2,7 +2,6 @@ package be.goldocelot.entocure.entity.custom.ant.goal;
 
 import be.goldocelot.entocure.entity.custom.ant.AntEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.goal.MoveToBlockGoal;
 import net.minecraft.world.item.ItemStack;
@@ -11,12 +10,12 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class AntPickUpGrass extends MoveToBlockGoal {
+public class AntPickUpGrassGoal extends MoveToBlockGoal {
     private static final int WAIT_TICKS = 40;
     protected int ticksWaited;
 
     private AntEntity ant;
-    public AntPickUpGrass(AntEntity pant, double pSpeedModifier, int pSearchRange, int pVerticalSearchRange) {
+    public AntPickUpGrassGoal(AntEntity pant, double pSpeedModifier, int pSearchRange, int pVerticalSearchRange) {
         super(pant, pSpeedModifier, pSearchRange, pVerticalSearchRange);
         ant = pant;
     }
